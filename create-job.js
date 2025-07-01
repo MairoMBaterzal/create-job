@@ -10,7 +10,7 @@ app.post('/run', async (req, res) => {
   console.log('📦 Received jobs:', jobs);
 
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
